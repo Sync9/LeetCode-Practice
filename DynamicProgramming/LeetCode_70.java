@@ -15,4 +15,20 @@ class Solution {
         return cache[n];
     }
 }
-/*Solving the DP problem by using State transition equation*/
+/*Solving the DP problem by using iteration*/
+class Solution {
+    public int climbStairs(int n) {
+        int pre=1;
+        int cur=2;
+        int res=0;
+        if(n==1) return pre;
+        else if(n==2) return cur;
+        else
+            for(int i=3;i<=n;i++){
+                res=pre+cur;
+                pre=cur;
+                cur=res;
+            }
+            return res;
+    }
+}
