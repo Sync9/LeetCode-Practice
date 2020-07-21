@@ -4,9 +4,9 @@ class Solution {
         int[] cache=new int[n+1];
         for(int item:cache)
             item=0;
-        if(n>=1) return cache[1]=1;
-        if(n>=2) return cache[2]=2;
-        if(n>=3) return cache[3]=3;
+        if(n>=1) cache[1]=1;
+        if(n>=2) cache[2]=2;
+        if(n>=3) cache[3]=3;
         return dp(n,cache);
     }
     private int dp(int n,int[] cache){
