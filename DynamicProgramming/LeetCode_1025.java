@@ -1,3 +1,11 @@
+/*The problem could be samplified.
+ *The one who gets 1 will defeat.
+ *When N is an even number,it's Alice controls the contest.
+ *She will play optimally then she will finally win the contest.
+ *When N is an odd number,it's Bob controls the contest.
+ *He will paly optimally then he will finally win the contest.
+*/
+/*When I don't know that*/
 class Solution {
     public boolean divisorGame(int N) {
         int cache[]=new int[N+1];
@@ -23,5 +31,11 @@ class Solution {
     private int sign(boolean bool){
         if(bool==true) return 1;
         else return -1;
+    }
+}
+/*When I know that*/
+class Solution {
+    public boolean divisorGame(int N) {
+        return N%2==0;
     }
 }
